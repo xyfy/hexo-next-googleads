@@ -23,3 +23,5 @@ googleads:
   enable: false
   client_id: # google ads client id
 ```
+
+It now only support `google-auto-ad` website
