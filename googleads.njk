@@ -1,11 +1,11 @@
 {{ next_data('googleads', theme.googleads) }}
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={% CONFIG.googleads.client_id %}"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ CONFIG.googleads.client_id }}"
      crossorigin="anonymous"></script>
 {%- if CONFIG.googleads.post_ads_enable %}
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
      data-ad-format="fluid"
-     data-ad-client="CONFIG.googleads.client_id"
-     data-ad-slot="CONFIG.googleads.post_ads_slot"></ins>
+     data-ad-client="{{CONFIG.googleads.client_id}}"
+     data-ad-slot="{{CONFIG.googleads.post_ads_slot}}"></ins>
 {%- endif %}
