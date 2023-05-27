@@ -17,7 +17,7 @@ hexo.extend.filter.register('theme_inject', injects => {
 
   injects.bodyEnd.raw('googleads', utils.getFileContent('googleads.njk'));
   if(config.post_ads_enable){
-  injects.bodyEnd.raw('googleads','<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>');
+    njects.bodyEnd.raw('googleads','<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>');
   }
   //injects.style.push(utils.getFilePath('googleads.styl'));
 }, (hexo.config.googleads || {}).priority);

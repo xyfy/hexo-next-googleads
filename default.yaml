@@ -1,6 +1,6 @@
 googleads:
   enable: false
-  cliend_id: # google ads client id
+  client_id: # google ads client id
   post_ads_enable: false # enable google ads after post,not support now
   post_ads_width:
   post_ads_height:

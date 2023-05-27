@@ -21,5 +21,5 @@ You can config those in both **hexo** or **theme** `_config.yml`
 ``` yaml
 googleads:
   enable: false
-  cliend_id: # google ads client id
+  client_id: # google ads client id
 ```
