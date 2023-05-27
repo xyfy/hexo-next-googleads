@@ -14,10 +14,10 @@ hexo.extend.filter.register('theme_inject', injects => {
       hexo.log.warn(`googleads.client_id can't be null.`);
       return;
   }
-
-  injects.bodyEnd.raw('googleads', utils.getFileContent('googleads.njk'));
+  injects.head.raw('googleads','<script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+config.client_id+'" crossorigin="anonymous"></script>');
   if(config.post_ads_enable){
-    njects.bodyEnd.raw('googleads','<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>');
+    injects.bodyEnd.raw('googleads', utils.getFileContent('googleads.njk'));
+    injects.bodyEnd.raw('googleads','<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>');
   }
   //injects.style.push(utils.getFilePath('googleads.styl'));
 }, (hexo.config.googleads || {}).priority);
