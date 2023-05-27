@@ -10,8 +10,8 @@ hexo.extend.filter.register('theme_inject', injects => {
   let config = utils.defaultConfigFile('googleads', 'default.yaml');
   if (!config.enable) return;
 
-  if (!config.cliend_id) {
-      hexo.log.warn(`googleads.cliend_id can't be null.`);
+  if (!config.client_id) {
+      hexo.log.warn(`googleads.client_id can't be null.`);
       return;
   }
 
