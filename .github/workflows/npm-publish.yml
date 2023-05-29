@@ -39,6 +39,8 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm install
+      - run: git config --global user.email "git_action@xyfy.com"
+      - run: git config --global user.name "Manual publish"
       - run: npm version ${{ inputs.version_update_type }} 
       - run: npm publish
         env:
