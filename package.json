@@ -1,6 +1,6 @@
 {
     "name": "hexo-next-googleads",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Google Adsense system for NexT.",
     "main": "index.js",
     "scripts": {
