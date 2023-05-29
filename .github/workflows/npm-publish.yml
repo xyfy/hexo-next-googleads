@@ -43,6 +43,7 @@ jobs:
       - run: git config --global user.name "Manual publish"
       - run: npm version ${{ inputs.version_update_type }} 
       - run: npm publish
+      - run: git push
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
   
