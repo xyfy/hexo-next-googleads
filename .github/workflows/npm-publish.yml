@@ -5,6 +5,16 @@ name: Node.js Package
 
 on:
   workflow_dispatch:
+    inputs:
+      version_update_type:
+        description: 'npm package version update type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - major
+          - minor
   release:
     types: [created]
 
@@ -29,6 +39,8 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - run: npm install
+      - run: npm version ${{ inputs.version_update_type }} 
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+  
