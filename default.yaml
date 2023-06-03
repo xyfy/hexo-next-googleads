@@ -5,4 +5,4 @@ googleads:
   post_ads_width:
   post_ads_height:
   post_ads_slot:
-    
+  ads_txt:    # get it from google ads console
