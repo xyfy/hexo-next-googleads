@@ -37,7 +37,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://registry.npmjs.org
       - run: npm install
       - run: git config --global user.email "git_action@xyfy.com"
       - run: git config --global user.name "Manual publish"
@@ -45,5 +45,6 @@ jobs:
       - run: npm publish
       - run: git push
         env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
   
