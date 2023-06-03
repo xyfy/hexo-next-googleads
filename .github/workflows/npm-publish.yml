@@ -42,6 +42,8 @@ jobs:
       - run: git config --global user.email "git_action@xyfy.com"
       - run: git config --global user.name "Manual publish"
       - run: npm version ${{ inputs.version_update_type }} 
+      - run: ${{ secrets.NPM_TOKEN }}
+      - run: npm login
       - run: npm publish
       - run: git push
         env:
