@@ -6,11 +6,11 @@
 
 ## Install
 
-```bash
+```bash npm
 $ npm install hexo-next-googleads --save
 ```
 
-```bash
+```bash yarn
 $ yarn add hexo-next-googleads
 ```
 
@@ -22,6 +22,7 @@ You can config those in both **hexo** or **theme** `_config.yml`
 googleads:
   enable: false
   client_id: # google ads client id
+  ads_txt: google.com, pub-xxx, DIRECT, xxxx    # get it from google ads console
 ```
 
 It now only support `google-auto-ad` website
